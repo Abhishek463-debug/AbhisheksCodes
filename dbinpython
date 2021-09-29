@@ -1,0 +1,8 @@
+import mysql.connector
+dbforemployee = mysql.connector.connect(
+  host = "localhost",
+  user = "abhishek",
+  password = "password"
+  )
+  cursorfordb = dbforemployee.cursor()
+  cursorfordb.execute("CREATE DATABASE mydatabase")
