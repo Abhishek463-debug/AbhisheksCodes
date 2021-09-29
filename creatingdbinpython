@@ -1,21 +1,22 @@
 import mysql.connector
+import sys
 
 customer_file = open("filename.txt" , "r")
-for line in customer_file.readlines():
-    a = line.split("|")
-    if a[0] == 'H':
-        customer_name = a[1]
-        customer_ID = a[2]
-        open_date = a[3]
-        last_consulted_date = a[4]
-        vaccination_id = a[5]
-        dr_name = a[6]
-        state = a[7]
-        country = a[8]
-        DOB = a[9]
-        is_active = a[10]
-   else:
-       continue
+a = customer_file.readline().split("|")
+if a[0] == 'H':
+   customer_name = a[1]
+   customer_ID = a[2]
+   open_date = a[3]
+   last_consulted_date = a[4]
+   vaccination_id = a[5]
+   dr_name = a[6]
+   state = a[7]
+   country = a[8]
+   DOB = a[9]
+   is_active = a[10]
+ else:
+   sys.exit("Error, no headers available!")
+ 
 customer_file.close()
 
 
