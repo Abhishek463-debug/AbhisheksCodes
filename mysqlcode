@@ -10,14 +10,13 @@ CREATE TABLE employee (
     DOB DATE,
     is_active CHAR(1)
 );
-INSERT INTO employee VALUES('Alex', 123457,'2010-10-12', '2012-10-13', 'MVD', 'Paul', 'SA', 'USA', '1987-06-03', 'A');
-INSERT INTO employee VALUES('John', 123458,'2010-10-12', '2012-10-13', 'MVD', 'Paul', 'TN', 'IND', '1987-06-03', 'A');
-INSERT INTO employee VALUES('Mathew', 123459,'2010-10-12', '2012-10-13', 'MVD', 'Paul', 'WAS', 'PHIL', '1987-06-03', 'A');
-INSERT INTO employee VALUES('Matt', 12345,'2010-10-12', '2012-10-13', 'MVD', 'Paul', 'BOS', 'NYC', '1987-06-03', 'A');
-INSERT INTO employee VALUES('Jacob', 1256,'2010-10-12', '2012-10-13', 'MVD', 'Paul', 'VIC', 'AU', '1987-06-03', 'A');
+INSERT INTO employee VALUES('Alex', '123457','2010-10-12', '2012-10-13', 'MVD', 'Paul', 'SA', 'USA', '1987-06-03', 'A');
+INSERT INTO employee VALUES('John', '123458','2010-10-12', '2012-10-13', 'MVD', 'Paul', 'TN', 'IND', '1987-06-03', 'A');
+INSERT INTO employee VALUES('Mathew', '123459','2010-10-12', '2012-10-13', 'MVD', 'Paul', 'WAS', 'PHIL', '1987-06-03', 'A');
+INSERT INTO employee VALUES('Matt', '12345','2010-10-12', '2012-10-13', 'MVD', 'Paul', 'BOS', 'NYC', '1987-06-03', 'A');
+INSERT INTO employee VALUES('Jacob', '1256','2010-10-12', '2012-10-13', 'MVD', 'Paul', 'VIC', 'AU', '1987-06-03', 'A');
 SELECT * FROM employee WHERE country = "IND";
 SELECT * FROM employee WHERE country = "USA";
 SELECT * FROM employee WHERE country = "PHIL";
 SELECT * FROM employee WHERE country = "NYC";
 SELECT * FROM employee WHERE country = "AUS";
-
