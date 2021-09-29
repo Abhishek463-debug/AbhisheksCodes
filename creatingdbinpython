@@ -1,5 +1,5 @@
 import mysql.connector
-countrylist = []
+
 customer_file = open("filename.txt" , "r")
 for line in customer_file.readlines():
     a = line.split("|")
@@ -43,7 +43,7 @@ dbforcustomers = mysql.connector.connect(
     
     
     
-    
+ countrylist = []   
  customer_file_1 = open("filename.txt", r)
     for line in customer_file_1.readlines():
     	a = line.split("|")
