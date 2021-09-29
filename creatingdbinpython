@@ -57,13 +57,13 @@ dbforcustomers = mysql.connector.connect(
      		which_state = a[7]
      		which_country = a[8]
      			if which_country not in countrylist:
-         		countrylist.append(which_country)
+         			countrylist.append(which_country)
      		birthdate = a[9]
      		status = a[10]
      		sql = "INSERT INTO customer VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
      		val = (cust_name, cust_ID, opening_date, last_consultation, vaccine_id, doctor_name, which_state, which_country, birthdate, status)
      		cursorfordb.execute(sql,val)
-				dbforcustomers.commit()
+			dbforcustomers.commit()
       else:
 				continue
 			customer_file_1.close()
@@ -75,7 +75,7 @@ dbforcustomers = mysql.connector.connect(
  
  
  countryfortable = str(input("Enter the country whose customers you wish to see: ")    
- specify = "SELECT * FROM customer WHERE country = {} ".format(countryfortable)
+ specify = "SELECT * FROM customer WHERE country = {}".format(countryfortable)
  cursorfordb.execute(specify)
  result = cursorfordb.fetchall()
  for x in result:
