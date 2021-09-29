@@ -5,4 +5,4 @@ dbforemployee = mysql.connector.connect(
   password = "password"
   )
   cursorfordb = dbforemployee.cursor()
-  cursorfordb.execute("CREATE DATABASE mydatabase")
+  cursorfordb.execute("CREATE DATABASE customers_DB")
