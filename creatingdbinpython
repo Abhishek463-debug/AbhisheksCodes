@@ -1,0 +1,44 @@
+import mysql.connector
+countrylist = []
+dbforcustomers = mysql.connector.connect(
+  host = "localhost",
+  user = "abhishek",
+  password = "password",
+  database = "customers_DB"
+  )
+  cursorfordb = dbforcustomers.cursor()
+  cursorfordb.execute("CREATE TABLE customer (
+    customer_name VARCHAR(255),
+    customer_ID VARCHAR(18) PRIMARY KEY,
+    open_date DATE,
+    last_consulted_date DATE,
+    vaccination_id CHAR(5),
+    dr_name CHAR(255),
+    state CHAR(5),
+    country CHAR(5),
+    DOB DATE,
+    is_active CHAR(1))")
+ n = int(input("How many customers are there?:")
+ for i in range(n):
+     cust_name = str(input("Enter the customer's name: ")
+     cust_ID = str(input("Enter the customer ID: ")
+     opening_date = str(input("Enter the open date: ")
+     last_consultation = str(input("Enter the date the customer last consulted on: ")
+     vaccine_id = str(input("Enter the vaccination ID of the customer: ")
+     doctor_name = str(input("Enter the doctor's name: ")
+     which_state = str(input("Enter the state the customer resides in: ")
+     which_country = str(input("Enter the country the customer resides in: ")
+     if which_country not in countrylist:
+         countrylist.append(which_country)
+     birthdate = str(input("Enter the date of birth of the customer: ")
+     status = str(input("Enter if he is active(A) or not(NA).")
+     sql = "INSERT INTO customer VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+     val = (cust_name, cust_ID, opening_date, last_consultation, vaccine_id, doctor_name, which_state, which_country, birthdate, status)
+     cursorfordb.execute(sql,val)
+        
+     dbforcustomers.commit()
+ countryfortable = str(input("Enter the country whose customers you wish to see: ")    
+ specify = "SELECT * FROM customer WHERE country = {}".format(countryfortable)
+        
+        
+   
