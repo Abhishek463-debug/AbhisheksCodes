@@ -18,6 +18,11 @@ dbforcustomers = mysql.connector.connect(
     country CHAR(5),
     DOB DATE,
     is_active CHAR(1))")
+    
+    
+    
+    
+    
  n = int(input("How many customers are there?:")
  for i in range(n):
      cust_name = str(input("Enter the customer's name: ")
@@ -37,8 +42,22 @@ dbforcustomers = mysql.connector.connect(
      cursorfordb.execute(sql,val)
         
      dbforcustomers.commit()
+ #if you do not wish to add customers into the table, you can comment out the above parts.#
+ 
+ 
+ 
+ 
+ 
  countryfortable = str(input("Enter the country whose customers you wish to see: ")    
- specify = "SELECT * FROM customer WHERE country = {}".format(countryfortable)
-        
+ specify = "SELECT * FROM customer WHERE country = {} ".format(countryfortable)
+ cursorfordb.execute(specify)
+ result = cursorfordb.fetchall()
+ for x in result:
+     print(x)
+       
+       
+ #TO store in a different file:
+ specify = "SELECT * FROM customer WHERE country = {} INTO OUTFILE 'C:/Data/Customer.txt' ".format(countryfortable)
+ cursorfordb.execute(specify)
         
    
