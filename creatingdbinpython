@@ -48,8 +48,7 @@ dbforcustomers = mysql.connector.connect(
     for line in customer_file_1.readlines():
     	a = line.split("|")
 		if a[0] == 'D':
-		
-     		cust_name = a[1]
+			cust_name = a[1]
      		cust_ID = a[2]
      		opening_date = a[3]
      		last_consultation = a[4]
