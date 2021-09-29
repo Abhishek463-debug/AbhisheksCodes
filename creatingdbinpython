@@ -64,7 +64,7 @@ dbforcustomers = mysql.connector.connect(
      		val = (cust_name, cust_ID, opening_date, last_consultation, vaccine_id, doctor_name, which_state, which_country, birthdate, status)
      		cursorfordb.execute(sql,val)
 			dbforcustomers.commit()
-        else:
+         else:
 			continue
 		customer_file_1.close()
      	
